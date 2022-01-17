@@ -33,21 +33,7 @@ class Form {
     this.greetings.hide();
   }
   end() {
-    if (player.rank >= 4) {
-      var reset = createButton("Reset");
-      reset.position(displayWidth - 200, 20);
-      reset.mousePressed(() => {
-        player.updateBikesAtEnd(0);
-        player.updateCount(0);
-        game.update(0);
-        var playerref = database.ref("players");
-        playerref.remove();
-        this.greetings2.hide();
-        window.location.reload();
-      });
-    }
-
-    this.greetings2.html(
+       this.greetings2.html(
       "Congratulations " + player.name + " Your Rank is " + player.rank
     );
     this.greetings2.class("greeting");
