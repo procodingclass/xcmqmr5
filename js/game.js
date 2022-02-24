@@ -50,7 +50,7 @@ class Game {
 
     if (allplayers !== undefined) {
       background("#263238");
-      image(trackimg, 0, -displayHeight * 4, displayWidth, displayHeight * 5);
+      image(trackimg, 0, -height * 4, width, height * 5);
 
       var index = 0;
       var x = 215;
@@ -96,7 +96,7 @@ class Game {
       player.update();
     }
 
-    if (player.distance > 4670) {
+    if (player.distance > 2450) {
       gameState = 2;
       player.rank += 1;
       player.updateBikesAtEnd(player.rank);
